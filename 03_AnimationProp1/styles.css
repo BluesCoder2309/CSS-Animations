@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.ball {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    border-radius: 50%;
+    background: conic-gradient(red,orange,yellow,green,blue);
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+}
+body:hover .ball{
+    animation-play-state: running;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translate(450px);
+    }
+}

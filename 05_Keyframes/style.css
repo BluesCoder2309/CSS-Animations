@@ -1,0 +1,46 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.ball {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    border-radius: 50%;
+    background: conic-gradient(red,orange,yellow,green,blue);
+    /* animation-name: slide;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused; */
+    animation: slide 2s 1s linear infinite alternate running;
+}
+body:hover .ball{
+    animation-play-state: paused;
+}
+
+@keyframes slide{
+    0% {
+        transform: translateY(0%) rotate(900deg);
+    }
+    25% {
+        transform: translateY(700px) rotate(1800deg);
+    }
+    50% {
+        transform: translate(700px, 700px) rotate(2700deg);
+    }
+    75% {
+        transform: translate(700px, 0%) rotate(3600deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(4500deg);
+    }
+}
